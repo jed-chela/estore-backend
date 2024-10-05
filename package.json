@@ -1,0 +1,32 @@
+{
+  "name": "estore-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "start:watch": "NODE_ENV='development' node-dev -r dotenv/config src/app.js",
+    "start:watch-windows": "SET NODE_ENV='testing' & node-dev -r dotenv/config src/app.js",
+    "dev": "SET NODE_ENV='development' & node-dev -r dotenv/config src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^7.11.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-session": "^1.17.3",
+    "firebase-admin": "^12.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.4"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "jest": "^29.7.0",
+    "node-dev": "^8.0.0"
+  }
+}

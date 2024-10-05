@@ -1,0 +1,33 @@
+// console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV == 'development') {
+    const dotenv = require('dotenv');
+    dotenv.config();
+}
+
+if (process.env.NODE_ENV == 'testing') {
+    const dotenv = require('dotenv');
+    require('dotenv').config({ path: '.env.production.local' })
+}
+
+module.exports = {
+    PORT: process.env.PORT,
+    DB_HOST: process.env.DB_HOST,
+    DB_USER: process.env.DB_USER,
+    DB_PASS: process.env.DB_PASS,
+    DB_NAME: process.env.DB_NAME,
+    DB_PORT: process.env.DB_PORT,
+    DB_SSL: process.env.DB_SSL,
+    SECRET_KEY: process.env.SECRET_KEY,
+    SECRET_SESSION: process.env.SECRET_SESSION,
+    AWS_ACCESS_KEY: process.env.AWS_ACCESS_KEY,
+    AWS_SECRET_KEY: process.env.AWS_SECRET_KEY,
+    STATIC: process.env.STATIC,
+    GooglePeopleAPI_clientID: process.env.GooglePeopleAPI_clientID,
+    GooglePeopleAPI_clientSecret: process.env.GooglePeopleAPI_clientSecret,
+    GSA_PROJECT_ID: process.env.GSA_PROJECT_ID,
+    GSA_PRIVATE_KEY: process.env.GSA_PRIVATE_KEY,
+    GSA_CLIENT_EMAIL: process.env.GSA_CLIENT_EMAIL,
+    GSA_STORAGE_BUCKET: process.env.GSA_STORAGE_BUCKET,
+    DEFAULT_PAGE_LIMIT: process.env.DEFAULT_PAGE_LIMIT,
+};
+
